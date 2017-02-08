@@ -122,7 +122,7 @@ bindsym $mod+a focus parent
 bindsym Mod1+Tab workspace next
 bindsym $mod+1 workspace 1: home
 bindsym $mod+2 workspace 2: web
-bindsym $mod+3 workspace 3
+bindsym $mod+3 workspace 3: mail
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -184,6 +184,7 @@ bar {
         status_command i3blocks -c /home/chrislovessushi/.config/i3/i3blocks.conf
         position top
 	font pango:Awesome 9, Terminus 8
+	strip_workspace_numbers yes
 	colors {
 		background #0a1f26
 		statusline #2AA198
@@ -199,7 +200,7 @@ client.focused_inactive #839cc4 #2b2b2b #ffffff #2b2b2b
 #client.unfocused        #ffffff #2b2b2b #ffffff #2b2b2b
 #client.urgent           #ffffff #900000 #ffffff #2b2b2b
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id feh --bg-fill ~/Pictures/JheUVIb.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/OdzhLJP.jpg
 # exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
