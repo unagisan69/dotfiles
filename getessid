@@ -1,0 +1,2 @@
+iwconfig wlp3s0 | grep ESSID | cut -c 31-100 | tr -d '"'
+
