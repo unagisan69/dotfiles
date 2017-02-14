@@ -19,7 +19,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 #new_window 1pixel
 new_window pixel 3
 
-bindsym $mod+m exec gnome-gmail --class Gmail
 for_window [class="^gnome-gmail$"] floating enable
 for_window [class="^Nautilus$"] floating enable
 for_window [title="^Sublime$"] floating enable
@@ -28,6 +27,8 @@ for_window [class="^subl$"] floating enable
 for_window [class="^Steam$"] floating enable
 #for_window [class="^Spotify$"] floating enable
 #for_window [class="^spotify$"] floating enable
+
+#assign [class="^Google-chrome$"] → 2
 
 # Float Toggle
 # bindsym button3 floating toggle
@@ -65,7 +66,11 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
-bindsym $mod+c exec google-chrome
+
+# Application Hotkeys
+bindsym $mod+c workspace 2: ; exec /usr/bin/google-chrome
+bindsym $mod+m workspace 3: ; exec gnome-gmail --class Gmail
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -75,6 +80,12 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
  bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# Spotify
+bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 # change focus
 bindsym $mod+j focus left
@@ -131,7 +142,7 @@ bindsym Mod1+Tab workspace next
 bindsym $mod+1 workspace 1: 
 bindsym $mod+2 workspace 2: 
 bindsym $mod+3 workspace 3: 
-bindsym $mod+4 workspace 4
+bindsym $mod+4 workspace 4: 
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -197,8 +208,8 @@ bar {
 		background #0a1f26
 		statusline #2AA198
 		separator #0a1f26
-		focused_workspace  #000000 #333333 #ffffff
-		active_workspace   #000000 #333333 #ffffff
+		focused_workspace  #333333 #333333 #ffffff
+		active_workspace   #333333 #333333 #ffffff
 		inactive_workspace #13131A #13131A #888888
 	}
 }
