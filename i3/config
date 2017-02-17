@@ -20,6 +20,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 new_window pixel 3
 # for_window [class="^.*"] border pixel 0
 
+# Three finger swipe
+bindsym --whole-window $mod+0x2c workspace prev
+bindsym --whole-window $mod+0x2e workspace next
+
 # Gaps
 gaps inner 5
 smart_borders on
@@ -68,7 +72,7 @@ for_window [class="^subl$"] floating enable
 for_window [class="^Steam$"] floating enable
 #for_window [class="^Spotify$"] floating enable
 #for_window [class="^spotify$"] floating enable
-for_window [class="Google-chrome"] fullscreen enable
+#for_window [class="Google-chrome"] fullscreen enable
 #assign [class="^Google-chrome$"] → 2
 
 # Float Toggle
@@ -76,8 +80,8 @@ for_window [class="Google-chrome"] fullscreen enable
 bindsym $mod+t floating toggle 
 
 # Sreen brightness controls
-bindsym Mod4+Home  exec  light -A 5
-bindsym Mod4+End  exec  light -U 5
+bindsym 0x1008ff02  exec  light -A 5
+bindsym 0x1008ff03  exec  light -U 5
 
 # i3 restart
 bindsym $mod+Escape exec i3-msg restart
@@ -120,13 +124,14 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
- bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id dmenu_custom
+bindsym 0x1008ff1b exec --no-startup-id i3-dmenu-desktop
 # Spotify
-bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
-bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+bindsym $mod+0xff54 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+#bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+bindsym $mod+0xff51 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym $mod+0xff53 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 # change focus
 bindsym $mod+j focus left
@@ -241,7 +246,9 @@ bindsym $mod+r mode "resize"
 bar {
         #status_command bash $HOME/.config/i3/i3status.conf  ## Conky config
         #status_command ~/Documents/src/custi3stat.sh     ## i3status config
-        status_command i3blocks -c /home/chrislovessushi/.config/i3/i3blocks.conf
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        #status_command i3blocks
+
         position top
 	font pango:Awesome 10, Terminus 8
 	strip_workspace_numbers yes
@@ -260,7 +267,10 @@ client.focused_inactive #13131A #13131A #E4E49E #13131A
 client.unfocused        #13131A #13131A #E4E49E #13131A
 #client.urgent           #ffffff #900000 #E4E49E #2b2b2b
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id feh --bg-scale ~/Pictures/O6RFjT7.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/JheUVIb.jpg
 exec --no-startup-id compton
 exec --no-startup-id nm-applet
+#exec volumeicon
 exec --no-startup-id blueman-applet
+exec --no-startup-id fusuma
+exec synclient HorizTwoFingerScroll=1
