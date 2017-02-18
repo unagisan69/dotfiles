@@ -17,7 +17,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # Hide Titlebar
 #new_window 1pixel
-new_window pixel 3
+new_window pixel 5
 # for_window [class="^.*"] border pixel 0
 
 # Three finger swipe
@@ -25,7 +25,7 @@ bindsym --whole-window $mod+0x2c workspace prev
 bindsym --whole-window $mod+0x2e workspace next
 
 # Gaps
-gaps inner 5
+gaps inner 8
 smart_borders on
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -267,10 +267,12 @@ client.focused_inactive #13131A #13131A #E4E49E #13131A
 client.unfocused        #13131A #13131A #E4E49E #13131A
 #client.urgent           #ffffff #900000 #E4E49E #2b2b2b
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id feh --bg-scale ~/Pictures/JheUVIb.jpg
-exec --no-startup-id compton
+exec --no-startup-id feh --bg-scale ~/Pictures/xik7zX5.jpg
+exec --no-startup-id compton --config ~/.config/i3/compton.conf
 exec --no-startup-id nm-applet
 #exec volumeicon
 exec --no-startup-id blueman-applet
-exec --no-startup-id fusuma
+#exec --no-startup-id fusuma
 exec synclient HorizTwoFingerScroll=1
+exec synclient PalmDetect=1
+exec xautolock -time 10 -locker lock
