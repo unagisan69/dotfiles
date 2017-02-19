@@ -7,4 +7,4 @@ synclient PalmDetect=1 &
 blueman-applet &
 fusuma &
 feh --bg-scale ~/Pictures/xik7zX5.jpg &
-
+xfce4-power-manager &
