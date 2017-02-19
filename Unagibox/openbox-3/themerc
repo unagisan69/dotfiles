@@ -12,8 +12,8 @@ menu.items.bg.color: #002B36
 menu.items.text.color: #EFEFA7
 menu.items.disabled.text.color: #707070
 menu.items.active.bg: flat border
-menu.items.active.bg.color: #7f1e31
-menu.items.active.bg.border.color: #c3314f
+menu.items.active.bg.color: #6C71C4
+menu.items.active.bg.border.color: #6476A8
 menu.items.active.text.color: #EFEFA7
 
 #======================================
