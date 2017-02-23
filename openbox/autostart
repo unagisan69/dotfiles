@@ -1,6 +1,6 @@
 tint2 &
 xautolock -time 10 -locker lock &
-compton --config /home/chrislovessushi/.config/i3/compton.conf &
+compton --backend glx --vsync opengl-swc --config /home/chrislovessushi/.config/i3/compton.conf &
 volumeicon &
 synclient HorizTwoFingerScroll=1 &
 synclient PalmDetect=1 &

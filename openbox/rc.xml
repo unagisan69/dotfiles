@@ -52,7 +52,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Ubuntu</name>
+      <name>Ubuntu Light</name>
       <size>8</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -103,10 +103,10 @@
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Sans</name>
+      <name>Ubuntu Light</name>
       <size>8</size>
-      <weight/>
-      <slant/>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
     </font>
   </theme>
   <desktops>
@@ -345,6 +345,11 @@
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>pactl set-sink-mute 0 toggle</command>
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>/opt/wmail-desktop/WMail</command>
       </action>
     </keybind>
     <!-- Keybindings for finding files -->
