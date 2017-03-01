@@ -322,6 +322,11 @@
         <command>gnome-terminal</command>
       </action>
     </keybind>
+    <keybind key="XF86LaunchA">
+      <action name="Execute">
+        <command>nest readtemp</command>
+      </action>
+    </keybind>
     <keybind key="W-c">
       <action name="Execute">
         <command>google-chrome</command>
@@ -355,7 +360,7 @@
     <!-- Keybindings for finding files -->
     <keybind key="W-f">
       <action name="Execute">
-        <command>pcmanfm --find-files</command>
+        <command>pcmanfm --no-desktop</command>
       </action>
     </keybind>
     <!--keybindings for LXPanel -->

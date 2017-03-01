@@ -6,5 +6,10 @@ synclient HorizTwoFingerScroll=1 &
 synclient PalmDetect=1 &
 blueman-applet &
 fusuma &
-feh --bg-scale ~/Pictures/xik7zX5.jpg &
+#feh --bg-scale ~/Pictures/xik7zX5.jpg &
+#feh --bg-scale ~/Pictures/Desert-Evening-Desktop-Wallpaper.png
+#feh --bg-scale ~/Pictures/fc2014d9e7360923b46d50266c3d024e.png
+#feh --bg-scale Pictures/neon_sunset_by_axiomdesign-d9cs997.jpg
+feh --bg-scale ~/Pictures/i3eUbML.jpg 
+perl ~/strmon_daemon.pl &
 xfce4-power-manager &
