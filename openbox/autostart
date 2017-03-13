@@ -4,6 +4,10 @@ compton --backend glx --vsync opengl-swc --config /home/chrislovessushi/.config/
 volumeicon &
 synclient HorizTwoFingerScroll=1 &
 synclient PalmDetect=1 &
+synclient RightButtonAreaLeft=0 &
+synclient RightButtonAreaTop=0 &
+synclient FingerHigh=45
+synclient FingerLow=40
 blueman-applet &
 fusuma &
 feh --bg-scale ~/Pictures/minimal-lake-sunset-img.jpg
